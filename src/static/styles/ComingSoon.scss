@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  // background: url('https://images.unsplash.com/photo-1625558298116-38f0173a522c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+  // background: url('/hero_intro.mp4') no-repeat center center;
+  background-size: cover;
+  color: white;
+  font-family: "Poppins", sans-serif;
+
+  h1 {
+    font-size: 3rem;
+    font-size: 60px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    max-width: 550px;
+    text-align: center;
+  }
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .email-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .email-content p {
+    font-size: 13px;
+  }
+
+  .input-box {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    max-width: 360px;
+    width: 100%;
+    margin-top: 20px;
+    column-gap: 20px;
+  }
+
+  .input-box input,
+  .input-box button {
+    height: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 400;
+  }
+
+  .input-box input {
+    width: 100%;
+    padding: 0 15px;
+    color: #fff;
+  }
+
+  input::placeholder {
+    color: #fff;
+  }
+
+  .input-box button {
+    cursor: pointer;
+    background-color: #eee;
+    color: #0d6a81;
+    white-space: nowrap;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+  }
+
+  .input-box button:hover {
+    background-color: #fff;
+  }
+}
+
+.coming-soon > * {
+  animation: fadeInUp 2s ease;
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px; /* Adjust as needed */
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.main-text {
+  font-size: 5rem; /* Adjust as needed */
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 20px; /* Adjust as needed */
+  color: #ffffff; /* Adjust as needed */
+  padding: 5px 5px;
+  border-radius: 0.5rem;
+  background: rgba(250, 250, 250, 0.2);
+  margin-bottom: 30px;
+}
+
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.timer-container > * {
+  margin: 0 10px; /* Adjust as needed */
+}

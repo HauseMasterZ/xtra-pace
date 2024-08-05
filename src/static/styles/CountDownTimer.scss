@@ -1,0 +1,32 @@
+.time-content {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    margin: 2rem;
+    border: 1px solid white;
+    padding: 2rem 2.5rem;
+    border-radius: 0.5rem;
+    background: rgba(250, 250, 250, 0.2);
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.number {
+    font-weight: 800;
+    font-size: 80px;
+    width: 5vw;
+    line-height: 1;
+    color: #eee;
+}
+
+.text {
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+}
+
