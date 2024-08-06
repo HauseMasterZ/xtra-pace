@@ -1,3 +1,10 @@
+$primary-color: #FFD700;
+/* Yellow */
+$secondary-color: #000000;
+/* Black */
+$text-color: #FFFFFF;
+/* White */
+
 .time-content {
     display: flex;
     column-gap: 30px;
@@ -25,8 +32,7 @@
 
 .text {
     text-transform: capitalize;
-    color: #fff;
+    color: $primary-color;
     font-weight: 600;
     font-size: 12px;
 }
-

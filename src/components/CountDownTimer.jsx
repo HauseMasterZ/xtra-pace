@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import '../static/styles/CountDownTimer.scss';
 import Hourglass from './Hourglass';
-const CountDownTimer = ({ days, hours, minutes, seconds }) => {
-    const [totalSeconds, setTotalSeconds] = useState(days * 86400 + hours * 3600 + minutes * 60 + seconds);
+import { doc, setDoc } from "firebase/firestore";
+import { db } from '../../firebaseConfig';
 
+const CountDownTimer = ({ days, hours, minutes, seconds }) => {
+    const initialTotalSeconds = days * 86400 + hours * 3600 + minutes * 60 + seconds;
+    const [totalSeconds, setTotalSeconds] = useState(() => initialTotalSeconds);
     useEffect(() => {
+        const updateFirebaseTimer = async (newTime) => {
+            const timerDoc = doc(db, "timer", "countdown");
+            await setDoc(timerDoc, newTime);
+        };
+
         const timer = setInterval(() => {
             setTotalSeconds(prevTotalSeconds => {
                 if (prevTotalSeconds <= 1) {
                     clearInterval(timer);
                     return 0;
                 }
-                return prevTotalSeconds - 1;
+                const newTotalSeconds = prevTotalSeconds - 1;
+                const newTime = formatTime(newTotalSeconds);
+                updateFirebaseTimer(newTime);
+                return newTotalSeconds;
             });
         }, 1000);
 
