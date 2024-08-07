@@ -7,8 +7,10 @@ $text-color: #FFFFFF;
 
 .time-content {
     display: flex;
-    column-gap: 30px;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
     margin: 2rem;
     border: 1px solid white;
     padding: 2rem 2.5rem;
@@ -18,21 +20,44 @@ $text-color: #FFFFFF;
 
 .time {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    margin: 10px;
 }
 
 .number {
-    font-weight: 800;
-    font-size: 80px;
-    width: 5vw;
+    font-size: 5rem;
+    margin-bottom: 5px;
+    //     width: 5vw;
+    font-weight: 500;
     line-height: 1;
     color: #eee;
 }
 
 .text {
+    font-size: 1em;
     text-transform: capitalize;
     color: $primary-color;
     font-weight: 600;
-    font-size: 12px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .number {
+        font-size: 1.5em;
+    }
+
+    .text {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 400px) {
+    .number {
+        font-size: 1.2em;
+    }
+
+    .text {
+        font-size: 0.7em;
+    }
 }

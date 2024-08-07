@@ -60,7 +60,7 @@ const ComingSoon = () => {
     return (
         <div className="coming-soon">
             <video autoPlay loop muted className="background-video">
-                <source src="/hero_intro.mp4" type="video/mp4" />
+                <source src="/background_video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <div className="logo-container">
